@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\inria\vvvv\contributions\ProjectorN (DX11)\_CalibrateProjector (DX11) help.v4p" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_29\calibrateBeta_291.v4p" locked="0" systemname="calibrateBeta_291" scrollx="0" scrolly="12336">
-   <BOUNDS height="9036" left="31908" top="2076" type="Window" width="11796">
+   <PATCH nodename="C:\vvvv\projects\ProjectorCalibration\_CalibrateProjector (DX11) help.v4p" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_29\calibrateBeta_291.v4p" locked="0" systemname="calibrateBeta_291" scrollx="0" scrolly="13680">
+   <BOUNDS height="9030" left="5760" top="3960" type="Window" width="11790">
    </BOUNDS>
    <LINK dstnodeid="34" dstpinname="Y Input Value" srcnodeid="22" srcpinname="Mouse XYZ">
    </LINK>
@@ -1179,9 +1179,9 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="..\..\..\Users\jasig_000\Documents\GitHub\vvvv.permeable.screens\data\Clock_Print_uvlayout.png">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="77" srcpinname="ModelTexture" dstnodeid="150" dstpinname="Input String">
-   </LINK>
    <LINK srcnodeid="150" srcpinname="Output String" dstnodeid="37" dstpinname="ModelTexture">
    </LINK>
    <LINK srcnodeid="150" srcpinname="Output String" dstnodeid="147" dstpinname="Filename">
@@ -1193,7 +1193,7 @@
    <NODE systemname="Scene" filename="..\..\projects\HybridPointing\Scene.v4p" nodename="..\..\projects\HybridPointing\Scene.v4p" componentmode="InAWindow" id="153">
    <BOUNDS type="Node" left="312" top="624" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="30612" top="2604" width="7812" height="7608">
+   <BOUNDS type="Window" left="2130" top="1740" width="11730" height="9045">
    </BOUNDS>
    <PIN pinname="Geometry" visible="1">
    </PIN>
@@ -1291,7 +1291,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2592" top="468" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,0.2">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,0.4">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

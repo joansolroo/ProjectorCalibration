@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\ProjectorCalibration\modules\dx11\Pipet (DX11)\Pipet (DX11).v4p" systemname="Pipet (DX11)" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_b29 (DX11)\Modules\dx11\Pipet (DX11)\Pipet (DX11).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha29.3.dtd" >
+   <PATCH nodename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_b29 (DX11)\Modules\dx11\Pipet (DX11)\Pipet (DX11).v4p" systemname="Pipet (DX11)" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_b29 (DX11)\Modules\dx11\Pipet (DX11)\Pipet (DX11).v4p">
    <BOUNDS type="Window" left="750" top="1200" width="2520" height="8175">
    </BOUNDS>
    <NODE systemname="CS_Pipet (DX11.Effect)" filename="%VVVV%\directx11\compute11\Pipet (DX11)\dx11\CS_Pipet.fx" nodename="CS_Pipet (DX11.Effect)" componentmode="Hidden" id="45">
@@ -12,10 +12,6 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="uv" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="UV Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Dispatcher (DX11.Drawer)" filename="%VVVV%\directx11\plugins\VVVV.DX11.Nodes.dll" nodename="Dispatcher (DX11.Drawer)" componentmode="Hidden" id="46">
@@ -112,8 +108,6 @@
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="texture2d">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="71" srcpinname="Output Node" dstnodeid="45" dstpinname="texture2d">
@@ -226,12 +220,4 @@
    </NODE>
    <LINK srcnodeid="79" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Element Count">
    </LINK>
-   <LINK srcnodeid="48" srcpinname="Buffer" dstnodeid="45" dstpinname="UV Buffer">
-   </LINK>
-   <LINK srcnodeid="71" srcpinname="Output Node" dstnodeid="45" dstpinname="Texture">
-   </LINK>
-   <PACK Name="VVVV.Packs" Version="0.2.0">
-   </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
-   </PACK>
    </PATCH>
