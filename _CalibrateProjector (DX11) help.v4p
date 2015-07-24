@@ -47,7 +47,7 @@
    </PIN>
    <PIN pinname="ModelTexture" visible="1" slicecount="9" values="..\vvvv.permeable.screens\data\Clock_Print_uvlayout.png,cross.png,cross.png,cross.png,cross.png,cross.png,cross.png,cross.png,cross.png">
    </PIN>
-   <PIN pinname="Color" visible="1">
+   <PIN pinname="Color" visible="1" slicecount="8" values="|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    </NODE>
    <LINK dstnodeid="37" dstpinname="Preview View Projection" linkstyle="Bezier" srcnodeid="35" srcpinname="Output Node">
@@ -889,7 +889,7 @@
    </BOUNDS>
    <PIN pinname="Render State" visible="1">
    </PIN>
-   <PIN pinname="Color" visible="1" slicecount="1" values="|0.87000,0.87000,0.87000,1.00000|">
+   <PIN pinname="Color" visible="1" slicecount="8" values="|0.00000,0.62500,1.00000,1.00000|,|0.12500,0.00000,1.00000,1.00000|,|0.87500,0.00000,1.00000,1.00000|,|1.00000,0.00000,0.37500,1.00000|,|1.00000,0.37500,0.00000,1.00000|,|0.87500,1.00000,0.00000,1.00000|,|0.12500,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.62500,1.00000|">
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1142,22 +1142,6 @@
    </PACK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE systemname="Scene" filename="..\..\projects\HybridPointing\Scene.v4p" nodename="..\..\projects\HybridPointing\Scene.v4p" componentmode="Hidden" id="153">
-   <BOUNDS type="Node" left="312" top="624" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="-23565" top="2835" width="21225" height="13365">
-   </BOUNDS>
-   <PIN pinname="Geometry" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Update" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Texture paths" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="AxisAndGrid (DX11)" filename="%VVVV%\packs\dx11\nodes\modules\AxisAndGrid\AxisAndGrid (DX11).v4p" nodename="AxisAndGrid (DX11)" componentmode="Hidden" id="154">
    <BOUNDS type="Node" left="420" top="16296" width="100" height="100">
    </BOUNDS>
@@ -1255,7 +1239,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="13365" top="18510" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1269,7 +1253,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Test saved file|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="172" srcpinname="Y Output Value" dstnodeid="171" dstpinname="Input" linkstyle="VHV">
@@ -1328,12 +1312,6 @@
    <LINKPOINT x="7005" y="18780">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="37" dstpinname="Color" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="1470" y="2828">
-   </LINKPOINT>
-   <LINKPOINT x="210" y="2828">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="168" srcpinname="Output" dstnodeid="51" dstpinname="Projection" linkstyle="VHV">
    <LINKPOINT x="7215" y="21788">
    </LINKPOINT>
@@ -1341,24 +1319,6 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="147" srcpinname="Texture Out" dstnodeid="145" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="145" dstpinname="Color" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="1485" y="9210">
-   </LINKPOINT>
-   <LINKPOINT x="3015" y="9210">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="153" srcpinname="Transform" dstnodeid="149" dstpinname="Input Node" linkstyle="VHV">
-   <LINKPOINT x="675" y="1815">
-   </LINKPOINT>
-   <LINKPOINT x="915" y="1815">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="153" srcpinname="Geometry" dstnodeid="151" dstpinname="Input Node" linkstyle="VHV">
-   <LINKPOINT x="855" y="1838">
-   </LINKPOINT>
-   <LINKPOINT x="3510" y="1838">
-   </LINKPOINT>
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="175">
    <BOUNDS type="Node" left="6930" top="19875" width="100" height="100">
@@ -1411,13 +1371,53 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Input String" slicecount="9" visible="1" values="..\vvvv.permeable.screens\data\Clock_Print_uvlayout.png,cross.png,cross.png,cross.png,cross.png,cross.png,cross.png,cross.png,cross.png">
+   <PIN pinname="Input String" slicecount="7" visible="1" values="Data\Clock_Print_uvlayout.png,Data\cross.png,Data\cross.png,Data\cross.png,Data\cross.png,Data\cross.png,Data\cross.png">
    </PIN>
    </NODE>
    <LINK srcnodeid="180" srcpinname="Output String" dstnodeid="37" dstpinname="ModelTexture">
    </LINK>
    <LINK srcnodeid="180" srcpinname="Output String" dstnodeid="147" dstpinname="Filename">
    <LINKPOINT x="3412" y="16373">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Scene" filename="Subpatches\Scene.v4p" nodename="Subpatches\Scene.v4p" componentmode="Hidden" id="153">
+   <BOUNDS type="Node" left="312" top="624" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-23565" top="2835" width="21225" height="13365">
+   </BOUNDS>
+   <PIN pinname="Geometry" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Update" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Texture paths" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="37" dstpinname="Color" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="1470" y="2828">
+   </LINKPOINT>
+   <LINKPOINT x="210" y="2828">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="145" dstpinname="Color" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="1485" y="9210">
+   </LINKPOINT>
+   <LINKPOINT x="3015" y="9210">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="153" srcpinname="Transform" dstnodeid="149" dstpinname="Input Node" linkstyle="VHV">
+   <LINKPOINT x="675" y="1815">
+   </LINKPOINT>
+   <LINKPOINT x="915" y="1815">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="153" srcpinname="Geometry" dstnodeid="151" dstpinname="Input Node" linkstyle="VHV">
+   <LINKPOINT x="855" y="1838">
+   </LINKPOINT>
+   <LINKPOINT x="3510" y="1838">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="153" srcpinname="Texture paths" dstnodeid="180" dstpinname="Input String">
