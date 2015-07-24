@@ -1,7 +1,15 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\ProjectorCalibration\Subpatches\Mesh.Viewer (DX11).v4p" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_29\Subpatches\Mesh.Viewer (DX11).v4p" systemname="Mesh.Viewer (DX11)" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha29.3.dtd" >
+   <PATCH nodename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_29\Subpatches\Mesh.Viewer (DX11).v4p" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_29\Subpatches\Mesh.Viewer (DX11).v4p" systemname="Mesh.Viewer (DX11)">
    <BOUNDS height="7320" left="4065" top="2010" type="Window" width="3705">
    </BOUNDS>
+   <NODE componentmode="Hidden" id="1" nodename="HSL (Color Join)" systemname="HSL (Color Join)">
+   <BOUNDS height="100" left="1635" top="2595" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha">
+   </PIN>
+   </NODE>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="2175" top="1980" type="Node" width="0">
    </BOUNDS>
@@ -16,12 +24,14 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Wireframe alpha|">
    </PIN>
    </NODE>
+   <LINK dstnodeid="1" dstpinname="Alpha" srcnodeid="0" srcpinname="Y Output Value">
+   </LINK>
    <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\directx11\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="44">
    <BOUNDS type="Node" left="975" top="5445" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Color" visible="1">
    </PIN>
-   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   <PIN pinname="Texture" visible="1">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -34,14 +44,18 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="44" dstpinname="Color">
+   </LINK>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\directx11\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="45">
    <BOUNDS type="Node" left="2085" top="4635" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" visible="1" slicecount="1" values="..\..\vvvv.permeable.screens\data\Clock_Print_uvlayout.png">
+   <PIN pinname="Filename" visible="1">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
+   <LINK srcnodeid="45" srcpinname="Texture Out" dstnodeid="44" dstpinname="Texture">
+   </LINK>
    <NODE componentmode="InABox" id="46" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="0" left="1125" top="1620" type="Node" width="0">
    </BOUNDS>
@@ -112,24 +126,6 @@
    <PIN pinname="Input String" slicecount="1" encoded="0" values="..\Media\testtexture.png">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Color)" componentmode="InABox" id="57" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="1590" top="1935" width="2250" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1590" top="1935" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Color">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="57" srcpinname="Color Output" dstnodeid="44" dstpinname="Color">
-   </LINK>
    <LINK srcnodeid="56" srcpinname="Output String" dstnodeid="45" dstpinname="Filename">
    </LINK>
-   <LINK srcnodeid="45" srcpinname="Texture Out" dstnodeid="44" dstpinname="Texture">
-   </LINK>
-   <PACK Name="VVVV.Packs" Version="0.2.0">
-   </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
-   </PACK>
    </PATCH>

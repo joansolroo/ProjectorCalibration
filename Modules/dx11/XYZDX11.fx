@@ -28,6 +28,7 @@ vs2ps VS(
 
     //transform position
     Out.PosW = mul(Pos, tW);
+	//Out.PosW = mul(float4(0,0,0,1), tW);
 	Out.Pos = mul(Out.PosW, tVP);
     return Out;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\inria\vvvv\contributions\ProjectorN (DX11)\Subpatches\Renderer.Projection.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Renderer.Projection.v4p" systemname="Renderer.Projection">
+   <PATCH nodename="C:\vvvv\projects\ProjectorCalibration\Subpatches\Renderer.Projection.v4p" filename="C:\kimchiandchips\Workshops\VVVV.Tutorials.Mapping2-3D\Subpatches\Renderer.Projection.v4p" systemname="Renderer.Projection" scrollx="0" scrolly="-360">
    <BOUNDS height="7695" left="7125" top="1830" type="Window" width="11145">
    </BOUNDS>
    <NODE componentmode="Hidden" id="6" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
@@ -155,7 +155,7 @@
    </BOUNDS>
    <BOUNDS height="1800" left="1320" top="2025" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="4212" left="53412" top="7032" type="Window" width="6084">
+   <BOUNDS height="4200" left="10845" top="23730" type="Window" width="6075">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -190,6 +190,8 @@
    <PIN pinname="Depth Buffer Format" slicecount="1" values="D32_Float">
    </PIN>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.90575,0.90575,0.90575,1.00000|" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="MouseState (System Split Legacy)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseState (System Split)" componentmode="Hidden" id="30">
@@ -262,4 +264,40 @@
    </PACK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="36" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="360" top="6105" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="360" top="6105" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="2" values=",">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="XY">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="XY" dstnodeid="36" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="RGB (Color Join)" nodename="RGB (Color Join)" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="3060" top="660" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Red" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Green" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Blue" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="29" dstpinname="Background Color">
+   </LINK>
    </PATCH>

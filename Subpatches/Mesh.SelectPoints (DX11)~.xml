@@ -1,11 +1,11 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.0.dtd" >
-   <PATCH nodename="C:\Users\serg1\Desktop\ProjectorN_b31.2 (DX11)\Subpatches\Mesh.SelectPoints (DX11).v4p" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_b29 (DX11)\Subpatches\Mesh.SelectPoints (DX11).v4p" systemname="Mesh.SelectPoints (DX11)" locked="0">
-   <BOUNDS height="14685" left="6810" top="615" type="Window" width="13905">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\vvvv\projects\ProjectorCalibration\Subpatches\Mesh.SelectPoints (DX11).v4p" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_b29 (DX11)\Subpatches\Mesh.SelectPoints (DX11).v4p" systemname="Mesh.SelectPoints (DX11)" locked="0" scrollx="0" scrolly="0">
+   <BOUNDS height="14685" left="8055" top="3690" type="Window" width="13905">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="..\Modules\Intersect (3d Vector DX11.Geometry Alt).v4p" id="0" nodename="Intersect (3d Vector DX11.Geometry Alt)" systemname="Intersect (3d Vector DX11.Geometry Alt)">
    <BOUNDS height="270" left="1350" top="3900" type="Node" width="8850">
    </BOUNDS>
-   <BOUNDS height="11085" left="8100" top="1005" type="Window" width="8325">
+   <BOUNDS height="13800" left="8100" top="1005" type="Window" width="10740">
    </BOUNDS>
    <PIN pinname="View Projection" visible="1" slicecount="1" values="||">
    </PIN>
@@ -158,7 +158,7 @@
    </LINK>
    <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Input 2">
    </LINK>
-   <NODE componentmode="Hidden" filename="Mesh.Viewer (DX11).v4p" id="90" nodename="Mesh.Viewer (DX11).v4p" systemname="Mesh.Viewer (DX11)">
+   <NODE componentmode="InAWindow" filename="Mesh.Viewer (DX11).v4p" id="90" nodename="Mesh.Viewer (DX11).v4p" systemname="Mesh.Viewer (DX11)">
    <BOUNDS height="270" left="570" top="1665" type="Node" width="2730">
    </BOUNDS>
    <BOUNDS height="7320" left="4065" top="2010" type="Window" width="3705">
@@ -178,6 +178,8 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="90" dstpinname="Output Node - Transform In" linkstyle="VHV">
@@ -764,15 +766,7 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="Output Node" dstnodeid="90" dstpinname="Mesh" linkstyle="VHV">
    </LINK>
-   <LINK srcnodeid="90" srcpinname="Layer Out" dstnodeid="147" dstpinname="Layer 1">
-   </LINK>
    <LINK srcnodeid="149" srcpinname="Layer" dstnodeid="147" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="144" srcpinname="Layer" dstnodeid="147" dstpinname="Layer 4" linkstyle="VHV">
-   <LINKPOINT x="8205" y="15188">
-   </LINKPOINT>
-   <LINKPOINT x="1155" y="15188">
-   </LINKPOINT>
    </LINK>
    <NODE systemname="Mesh.SelectPoints.MarkersS (DX11)" filename="Mesh.SelectPoints.MarkersS (DX11).v4p" nodename="Mesh.SelectPoints.MarkersS (DX11)" componentmode="Hidden" id="102">
    <BOUNDS type="Node" left="5460" top="13620" width="100" height="100">
@@ -804,12 +798,6 @@
    <LINKPOINT x="5900" y="13320">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="102" srcpinname="Layer Out" dstnodeid="147" dstpinname="Layer 3" linkstyle="VHV">
-   <LINKPOINT x="5460" y="14700">
-   </LINKPOINT>
-   <LINKPOINT x="990" y="14700">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="90" dstpinname="Transform In">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="150" systemname="IOBox (String)">
@@ -832,7 +820,7 @@
    </NODE>
    <LINK srcnodeid="150" srcpinname="Output String" dstnodeid="90" dstpinname="ModelTexture">
    </LINK>
-   <NODE componentmode="Hidden" filename="RendererWorld (DX11).v4p" id="89" nodename="RendererWorld (DX11)" systemname="RendererWorld (DX11)">
+   <NODE componentmode="InAWindow" filename="RendererWorld (DX11).v4p" id="89" nodename="RendererWorld (DX11)" systemname="RendererWorld (DX11)">
    <BOUNDS height="270" left="405" top="16140" type="Node" width="8220">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
@@ -868,10 +856,10 @@
    </LINK>
    <LINK srcnodeid="140" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Zoom">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="Camera ViewProjection" dstnodeid="101" dstpinname="View Projection" linkstyle="Bezier">
-   <LINKPOINT x="8565" y="13088">
+   <LINK srcnodeid="89" srcpinname="Camera ViewProjection" dstnodeid="101" dstpinname="View Projection" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="3150" y="13088">
    </LINKPOINT>
-   <LINKPOINT x="4350" y="13088">
+   <LINKPOINT x="4230" y="13088">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="89" srcpinname="Camera ViewProjection" dstnodeid="124" dstpinname="View Projection" linkstyle="Bezier" hiddenwhenlocked="1">
@@ -955,7 +943,7 @@
    </PIN>
    <PIN pinname="Input Bin Size" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Insert" visible="1">
+   <PIN pinname="Insert" visible="1" slicecount="1" values="0">
    </PIN>
    <BOUNDS type="Box" left="1395" top="11970">
    </BOUNDS>
@@ -973,8 +961,6 @@
    <LINK srcnodeid="96" srcpinname="Output" dstnodeid="66" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="98" srcpinname="Output" dstnodeid="66" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="107" srcpinname="Output" dstnodeid="66" dstpinname="Insert">
    </LINK>
    <NODE systemname="SetRow (Table Value)" filename="..\plugings\VVVV.Nodes.SpreadTableValue.dll" nodename="SetRow (Table Value)" componentmode="Hidden" id="116">
    <BOUNDS type="Node" left="10005" top="15375" width="1260" height="270">
@@ -1010,4 +996,38 @@
    </LINK>
    <PACK Name="cv" Version="0.1.0">
    </PACK>
+   <PACK Name="image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <LINK srcnodeid="93" srcpinname="Y Output Value" dstnodeid="66" dstpinname="Insert">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="151" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="225" top="195" width="2250" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="225" top="195" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Color">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="151" srcpinname="Color Output" dstnodeid="90" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Layer Out" dstnodeid="147" dstpinname="Layer 3" linkstyle="VHV">
+   <LINKPOINT x="5460" y="14700">
+   </LINKPOINT>
+   <LINKPOINT x="990" y="14700">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="144" srcpinname="Layer" dstnodeid="147" dstpinname="Layer 4" linkstyle="VHV">
+   <LINKPOINT x="8205" y="15188">
+   </LINKPOINT>
+   <LINKPOINT x="1155" y="15188">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Layer Out" dstnodeid="147" dstpinname="Layer 1">
+   </LINK>
    </PATCH>

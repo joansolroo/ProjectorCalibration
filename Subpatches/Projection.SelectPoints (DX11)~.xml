@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha29.3.dtd" >
-   <PATCH nodename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_b29 (DX11)\Subpatches\Projection.SelectPoints (DX11).v4p" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_29\Subpatches\Projection.SelectPoints (DX11).v4p" systemname="Projection.SelectPoints (DX11)">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\vvvv\projects\ProjectorCalibration\Subpatches\Projection.SelectPoints (DX11).v4p" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_29\Subpatches\Projection.SelectPoints (DX11).v4p" systemname="Projection.SelectPoints (DX11)" scrollx="0" scrolly="-360">
    <BOUNDS height="10665" left="6525" top="1170" type="Window" width="12030">
    </BOUNDS>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -61,7 +61,7 @@
    <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="77">
    <BOUNDS type="Node" left="8805" top="2970" width="1110" height="270">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -294,7 +294,53 @@
    <LINKPOINT x="7410" y="4073">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="AsValue (Table Value)" filename="%VVVV%\contributions\plugins\elliot\SpreadTable\VVVV.Nodes.SpreadTableValue.dll" nodename="AsValue (Table Value)" componentmode="Hidden" id="74">
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\directx11\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="116">
+   <BOUNDS type="Node" left="7980" top="10005" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="Y Output Value" dstnodeid="116" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="Spincursormesh (DX11)" filename="..\modules\Spincursormesh (DX11).v4p" nodename="Spincursormesh (DX11)" componentmode="Hidden" id="117">
+   <BOUNDS type="Node" left="8145" top="8535" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input XY" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Spin" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="80" srcpinname="Y Output Value" dstnodeid="117" dstpinname="Input XY">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Y Output Value" dstnodeid="117" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="117" srcpinname="Layer" dstnodeid="116" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="Layer Out" dstnodeid="116" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="118" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="7965" top="10410" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7965" top="10410" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Layer">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="116" srcpinname="Layer Out" dstnodeid="118" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="AsValue (Table Value)" filename="..\plugings\VVVV.Nodes.SpreadTableValue.dll" nodename="AsValue (Table Value)" componentmode="Hidden" id="74">
    <BOUNDS type="Node" left="8805" top="2370" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Table" visible="1" slicecount="1" values="||">
@@ -308,7 +354,7 @@
    </LINK>
    <LINK srcnodeid="74" srcpinname="Output" dstnodeid="77" dstpinname="Input">
    </LINK>
-   <NODE systemname="SetRow (Table Value)" filename="%VVVV%\contributions\plugins\elliot\SpreadTable\VVVV.Nodes.SpreadTableValue.dll" nodename="SetRow (Table Value)" componentmode="Hidden" id="82">
+   <NODE systemname="SetRow (Table Value)" filename="..\plugings\VVVV.Nodes.SpreadTableValue.dll" nodename="SetRow (Table Value)" componentmode="Hidden" id="82">
    <BOUNDS type="Node" left="525" top="7005" width="5010" height="270">
    </BOUNDS>
    <PIN pinname="Set" visible="1">
@@ -338,48 +384,28 @@
    </LINK>
    <LINK srcnodeid="115" srcpinname="Output" dstnodeid="82" dstpinname="Set">
    </LINK>
-   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\directx11\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="116">
-   <BOUNDS type="Node" left="7980" top="10005" width="100" height="100">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="119" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9945" top="7395" width="480" height="480">
    </BOUNDS>
-   <PIN pinname="Enabled" visible="1">
+   <BOUNDS type="Node" left="9945" top="7395" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
-   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Layer 1" visible="1">
+   <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Layer Out" visible="1">
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Spin">
    </PIN>
    </NODE>
-   <LINK srcnodeid="96" srcpinname="Y Output Value" dstnodeid="116" dstpinname="Enabled">
+   <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="117" dstpinname="Spin">
    </LINK>
-   <NODE systemname="Spincursormesh (DX11)" filename="..\modules\Spincursormesh (DX11).v4p" nodename="Spincursormesh (DX11)" componentmode="Hidden" id="117">
-   <BOUNDS type="Node" left="8145" top="8535" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input XY" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="80" srcpinname="Y Output Value" dstnodeid="117" dstpinname="Input XY">
-   </LINK>
-   <LINK srcnodeid="96" srcpinname="Y Output Value" dstnodeid="117" dstpinname="Enabled">
-   </LINK>
-   <LINK srcnodeid="117" srcpinname="Layer" dstnodeid="116" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="112" srcpinname="Layer Out" dstnodeid="116" dstpinname="Layer 1">
-   </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="118" systemname="IOBox (Node)">
-   <BOUNDS type="Node" left="7965" top="10410" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7965" top="10410" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Layer">
-   </PIN>
-   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="116" srcpinname="Layer Out" dstnodeid="118" dstpinname="Input Node">
-   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
    </PATCH>

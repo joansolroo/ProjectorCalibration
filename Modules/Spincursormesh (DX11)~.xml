@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha29.3.dtd" >
-   <PATCH nodename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_29\modules\Spincursormesh (DX11).v4p" systemname="Spin cursor mesh (DX11)" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_29\Modules\Spin cursor mesh (DX11).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
+   <PATCH nodename="C:\Users\colors1\Desktop\ProjectorN_b29 (DX11)\modules\Spincursormesh (DX11).v4p" systemname="Spin cursor mesh (DX11)" filename="C:\Users\colors1\Desktop\Dx11SandBox\Ported_DX11\ProjectorNode_29\Modules\Spin cursor mesh (DX11).v4p">
    <BOUNDS height="8835" left="7425" top="1305" type="Window" width="11775">
    </BOUNDS>
    <NODE componentmode="Hidden" id="17" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
