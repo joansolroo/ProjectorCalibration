@@ -150,12 +150,12 @@
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="29" nodename="Renderer (DX11)" systemname="Renderer (DX11)" filename="%VVVV%\directx11\plugins\VVVV.DX11.Nodes.dll">
+   <NODE componentmode="FullScreen" id="29" nodename="Renderer (DX11)" systemname="Renderer (DX11)" filename="%VVVV%\directx11\plugins\VVVV.DX11.Nodes.dll">
    <BOUNDS height="270" left="1320" top="2025" type="Node" width="5355">
    </BOUNDS>
    <BOUNDS height="1800" left="1320" top="2025" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="4200" left="10845" top="23730" type="Window" width="6075">
+   <BOUNDS height="4200" left="38445" top="21165" type="Window" width="6075">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>

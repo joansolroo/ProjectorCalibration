@@ -455,8 +455,6 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Tracked">
    </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
    </NODE>
    <LINK srcnodeid="29" srcpinname="Tracked" dstnodeid="26" dstpinname="Y Input Value">
    </LINK>
@@ -835,9 +833,9 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="8">
    </PIN>
-   <PIN pinname="Color Input" visible="1" slicecount="8" values="|0.00000,0.62500,1.00000,1.00000|,|0.12500,0.00000,1.00000,1.00000|,|0.87500,0.00000,1.00000,1.00000|,|1.00000,0.00000,0.37500,1.00000|,|1.00000,0.37500,0.00000,1.00000|,|0.87500,1.00000,0.00000,1.00000|,|0.12500,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.62500,1.00000|">
-   </PIN>
    </NODE>
+   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="69" dstpinname="Color Input">
+   </LINK>
    <NODE systemname="Count (Node)" nodename="Count (Node)" componentmode="Hidden" id="70">
    <BOUNDS type="Node" left="13830" top="10920" width="100" height="100">
    </BOUNDS>
@@ -961,23 +959,5 @@
    <LINK srcnodeid="48" srcpinname="Geometry Out" dstnodeid="45" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="46" dstpinname="Input 1">
-   </LINK>
-   <NODE systemname="Switch (Color Input)" nodename="Switch (Color Input)" componentmode="Hidden" id="77">
-   <BOUNDS type="Node" left="18945" top="9960" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Switch" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="77" srcpinname="Output" dstnodeid="69" dstpinname="Color Input">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="77" dstpinname="Switch">
-   </LINK>
-   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="77" dstpinname="Input 2">
-   <LINKPOINT x="19425" y="9930">
-   </LINKPOINT>
    </LINK>
    </PATCH>
